@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:unstable
+    container_name: jellyfin
+    volumes:
+      - //d/config:/config
+      - //d/config/cache:/cache
+      - //d/media/parents/movies:/media/parents/movies
+      - //d/media/parents/shows:/media/parents/shows
+      - //d/media/kids/movies:/media/kids/movies
+      - //d/media/kids/shows:/media/kids/shows
+    ports:
+      - 8096:8096
+    restart: 'unless-stopped'
+    environment:
+      - TZ=America/New_York
