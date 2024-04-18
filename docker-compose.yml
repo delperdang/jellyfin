@@ -5,7 +5,7 @@ services:
     container_name: jellyfin
     volumes:
       - //d/config:/config
-      - //d/config/cache:/cache
+      - //d/cache:/cache
       - //d/media/parents/movies:/media/parents/movies
       - //d/media/parents/shows:/media/parents/shows
       - //d/media/kids/movies:/media/kids/movies
