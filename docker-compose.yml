@@ -4,12 +4,12 @@ services:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
     volumes:
-      - //d/config:/config
-      - //d/cache:/cache
-      - //d/media/parents/movies:/media/parents/movies
-      - //d/media/parents/shows:/media/parents/shows
-      - //d/media/kids/movies:/media/kids/movies
-      - //d/media/kids/shows:/media/kids/shows
+      - /run/media/reguser/Elements/config:/config
+      - /run/media/reguser/Elements/cache:/cache
+      - /run/media/reguser/Elements/media/parents/movies:/media/parents/movies
+      - /run/media/reguser/Elements/media/parents/shows:/media/parents/shows
+      - /run/media/reguser/Elements/media/kids/movies:/media/kids/movies
+      - /run/media/reguser/Elements/media/kids/shows:/media/kids/shows
     ports:
       - 8096:8096
     restart: 'unless-stopped'
